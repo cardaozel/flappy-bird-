@@ -1,26 +1,67 @@
-# Flappy Bird
+# Flappy Bird (Browser Game)
 
-A simple Flappy Bird clone that runs in the browser.
+A lightweight, vanilla JavaScript Flappy Bird clone built with HTML5 Canvas.
 
-## How to play
+No frameworks, no build step, and no dependencies are required. Open the game in your browser and play.
 
-1. Open `index.html` in your browser (double-click or right-click → Open with → Browser)
-2. **Click** or press **Space** to flap
-3. Score by passing through the pipes
-4. Don't hit the pipes or the ground!
+## Demo
 
-## Running the game
+Run locally:
 
 ```bash
-# Simple way - open file directly
 open index.html
-
-# Or with a simple server
-npx serve .
-# Then go to http://localhost:3000
 ```
+
+Or serve with a local static server:
+
+```bash
+npx serve .
+```
+
+Then open the URL shown in your terminal (commonly `http://localhost:3000`).
+
+## Gameplay
+
+- Start the game with click/tap or `Space`
+- Keep the bird in the air by flapping
+- Pass through pipe gaps to increase score
+- Game ends when you hit a pipe, the ceiling, or the ground
 
 ## Controls
 
-- **Click** / **Space** = Flap
-- **Touch** on mobile = Flap
+- `Space`: flap / start / restart
+- Mouse click on canvas: flap / start / restart
+- Touch on canvas (mobile): flap / start / restart
+
+## Project Structure
+
+```text
+.
+├── index.html   # Page layout and canvas mount point
+├── style.css    # UI styling
+└── game.js      # Core game loop, physics, rendering, input
+```
+
+## Tech Stack
+
+- HTML5
+- CSS3
+- JavaScript (ES6)
+- Canvas API
+
+## Tune Game Difficulty
+
+Edit constants in `game.js`:
+
+- `GRAVITY`
+- `FLAP_FORCE`
+- `PIPE_SPEED`
+- `PIPE_GAP`
+- `PIPE_WIDTH`
+- `BIRD_SIZE`
+
+## Notes
+
+- The game runs fully in the browser.
+- Google Fonts is loaded in `index.html` for the title/font style.
+
